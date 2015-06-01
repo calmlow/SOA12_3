@@ -603,14 +603,14 @@
       <RuleFiringLimitError>true</RuleFiringLimitError>
       <UniqueRulesets>false</UniqueRulesets>
     </DecisionFunction>
-    <UpdateNumber>168</UpdateNumber>
-    <ValidationUpdateNumber>168</ValidationUpdateNumber>
+    <UpdateNumber>176</UpdateNumber>
+    <ValidationUpdateNumber>176</ValidationUpdateNumber>
     <UpdateTime>0</UpdateTime>
   </DataModel>
   <RuleSet id="G}-6cdae697:14dac55803a:-7c29">
     <Name>Ruleset1</Name>
     <Alias>Ruleset1</Alias>
-    <ValidationUpdateNumber>175</ValidationUpdateNumber>
+    <ValidationUpdateNumber>177</ValidationUpdateNumber>
     <Active>true</Active>
     <CalendarForm>DateTime</CalendarForm>
     <Rule id="G}-6cdae697:14dac55803a:-7c24">
@@ -1045,7 +1045,7 @@
       <Name>Rule1</Name>
       <Alias>Rule 1</Alias>
       <Description>If the uncertainty of the scoring is higher than 50 then the credit score shall be lowered with 11 units</Description>
-      <ValidationUpdateNumber>175</ValidationUpdateNumber>
+      <ValidationUpdateNumber>177</ValidationUpdateNumber>
       <Priority>medium</Priority>
       <Active>true</Active>
       <CalendarForm>DateTime</CalendarForm>
@@ -1099,8 +1099,8 @@
           <ParameterID>J}com.toycocredo.creditrating.v1.Root.{creditHistoryLengthMonths}</ParameterID>
         </Expression>
         <Expression id="L}1231">
-          <Value>root.creditScore - 11</Value>
-          <ResolvedValue>`L}1217`.`J}com.toycocredo.creditrating.v1.Root.{creditScore}` - 11</ResolvedValue>
+          <Value>root.creditScore - 21</Value>
+          <ResolvedValue>`L}1217`.`J}com.toycocredo.creditrating.v1.Root.{creditScore}` - 21</ResolvedValue>
           <IsConstant>false</IsConstant>
           <ParameterAlias>creditScore</ParameterAlias>
           <ParameterID>J}com.toycocredo.creditrating.v1.Root.{creditScore}</ParameterID>
@@ -1136,8 +1136,8 @@
     <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
     <CreationUpdateNumber>3</CreationUpdateNumber>
   </RuleSet>
-  <ValidationUpdateNumber>175</ValidationUpdateNumber>
-  <UpdateNumber>175</UpdateNumber>
+  <ValidationUpdateNumber>177</ValidationUpdateNumber>
+  <UpdateNumber>177</UpdateNumber>
   <ResourceBundle>CreditRatingRuleTranslations</ResourceBundle>
   <TestModel id="L}3">
     <TestSuite id="G}-6cdae697:14dac55803a:-7c14">
@@ -1541,7 +1541,7 @@
           </Fact>
         </TestResult>
         <NoRuleFiredIsError>false</NoRuleFiredIsError>
-        <ValidationUpdateNumber>143</ValidationUpdateNumber>
+        <ValidationUpdateNumber>176</ValidationUpdateNumber>
       </TestCase>
       <TestCase id="G}-6cdae697:14dac55803a:-7b94">
         <Name>TestCase2</Name>
@@ -1939,12 +1939,12 @@
           </Fact>
         </TestResult>
         <NoRuleFiredIsError>false</NoRuleFiredIsError>
-        <ValidationUpdateNumber>143</ValidationUpdateNumber>
+        <ValidationUpdateNumber>176</ValidationUpdateNumber>
       </TestCase>
-      <ValidationUpdateNumber>143</ValidationUpdateNumber>
+      <ValidationUpdateNumber>176</ValidationUpdateNumber>
     </TestSuite>
-    <ValidationUpdateNumber>143</ValidationUpdateNumber>
-    <UpdateNumber>143</UpdateNumber>
+    <ValidationUpdateNumber>176</ValidationUpdateNumber>
+    <UpdateNumber>176</UpdateNumber>
     <Validation>true</Validation>
     <AutoSync>true</AutoSync>
   </TestModel>

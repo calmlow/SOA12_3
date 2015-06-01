@@ -19,7 +19,7 @@
         </pattern>
     </decisionService>
     <schemaInformation>
-        <dictionary fqnPackage="lab3_2" fqnName="CreditRatingRule" updateNumber="153">
+        <dictionary fqnPackage="lab3_2" fqnName="CreditRatingRule" updateNumber="177">
             <schemaBrowser>
                 <package>com.toycocredo.creditrating.v1</package>
                 <namespace>http://www.toycocredo.com/creditRating/v1</namespace>
