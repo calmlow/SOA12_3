@@ -38,7 +38,7 @@
   <reference name="SOAPReference" ui:wsdlLocation="WSDLs/CreditRatingRule_DecisionService.wsdl">
     <interface.wsdl interface="http://xmlns.oracle.com/CreditRatingRule/CreditRatingRule_DecisionService_1#wsdl.interface(IDecisionService)"/>
     <binding.ws port="http://xmlns.oracle.com/CreditRatingRule/CreditRatingRule_DecisionService_1#wsdl.endpoint(CreditRatingRule_DecisionService_1/IDecisionService_pt)"
-                location="https://SEC22164.ica.ia-hc.net:7102/soa-infra/services/default/LAB3_2/CreditRatingRule_DecisionService?WSDL"
+                location="http://etuhu:7101/soa-infra/services/default/LAB3_2/CreditRatingRule_DecisionService?WSDL"
                 soapVersion="1.1">
       <property name="weblogic.wsee.wsat.transaction.flowOption" type="xs:string" many="false">WSDLDriven</property>
     </binding.ws>
