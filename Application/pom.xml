@@ -9,5 +9,6 @@
         <!-- Add project modules -->
     	<module>LAB3_1</module>
     	<module>LAB3_2</module>
+    	<module>Project1</module>
     </modules>
 </project>

@@ -8,6 +8,5 @@
 /target
 filebased-mds/local-mds
 filebased-mds/markers
-*.jws
 /tmp-mds
 /src/META-INF/jps-config.xml
