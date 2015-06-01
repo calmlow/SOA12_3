@@ -22,10 +22,13 @@ To get everything set up properly in order to be able to focus on the main objec
 
 ### Instructions
 * Check out the code from here: http://github.com/bjornn/SOA12_3
-<code>git clone  http://github.com/bjornn/SOA12_3</code>
+<code>git clone  http://github.com/bjornn/SOA12_3.git</code>
+or
+<code>git clone  https://github.com/calmlow/SOA12_3.git</code>
 
 * Alternatively, if you don't want to use git,  download a zip archive of the entire codebase from here:
 <code>http://github.com/bjornn/SOA12_3/archive/master.zip</code>
+<code>http://github.com/calmlow/SOA12_3/archive/master.zip</code>
 
 
 ## Lab 1: Create (or extend) a Rule component
