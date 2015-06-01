@@ -603,14 +603,14 @@
       <RuleFiringLimitError>true</RuleFiringLimitError>
       <UniqueRulesets>false</UniqueRulesets>
     </DecisionFunction>
-    <UpdateNumber>96</UpdateNumber>
-    <ValidationUpdateNumber>96</ValidationUpdateNumber>
+    <UpdateNumber>168</UpdateNumber>
+    <ValidationUpdateNumber>168</ValidationUpdateNumber>
     <UpdateTime>0</UpdateTime>
   </DataModel>
   <RuleSet id="G}-6cdae697:14dac55803a:-7c29">
     <Name>Ruleset1</Name>
     <Alias>Ruleset1</Alias>
-    <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+    <ValidationUpdateNumber>175</ValidationUpdateNumber>
     <Active>true</Active>
     <CalendarForm>DateTime</CalendarForm>
     <Rule id="G}-6cdae697:14dac55803a:-7c24">
@@ -1044,31 +1044,100 @@
     <Rule id="G}50ff28bf:14dad28bb38:-7c31">
       <Name>Rule1</Name>
       <Alias>Rule 1</Alias>
-      <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+      <Description>If the uncertainty of the scoring is higher than 50 then the credit score shall be lowered with 11 units</Description>
+      <ValidationUpdateNumber>175</ValidationUpdateNumber>
       <Priority>medium</Priority>
       <Active>true</Active>
       <CalendarForm>DateTime</CalendarForm>
       <TreeMode>false</TreeMode>
       <Visible>true</Visible>
-      <Pattern id="L}1191">
-        <IDofFactType>B}nil</IDofFactType>
-        <Form>Fact Type</Form>
+      <SimpleTest id="L}1217">
+        <FactType>root</FactType>
+        <IDofFactType>J}com.toycocredo.creditrating.v1.Root</IDofFactType>
+        <FactPath>root</FactPath>
+        <FactPathIDs>L}1217</FactPathIDs>
+        <Form>FormIsA</Form>
+        <IDofOperator>B}==</IDofOperator>
         <Connective>&amp;&amp;</Connective>
-        <TestForm>Simple</TestForm>
-        <Expression id="L}1192">
+        <Visible>false</Visible>
+        <DSLId>B}nil</DSLId>
+      </SimpleTest>
+      <SimpleTest id="L}1210">
+        <IDofFactType>B}nil</IDofFactType>
+        <Form>FormNotNested</Form>
+        <Expression id="L}1211">
+          <Value>root.scoringUncertainty</Value>
+          <ResolvedValue>`L}1217`.`J}com.toycocredo.creditrating.v1.Root.{scoringUncertainty}`</ResolvedValue>
           <IsConstant>false</IsConstant>
           <ParameterID>B}nil</ParameterID>
         </Expression>
-        <Operator>(for each case where)</Operator>
-      </Pattern>
+        <Expression id="L}1212">
+          <Value>50</Value>
+          <ResolvedValue>50</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+        <IDofOperator>B}&gt;</IDofOperator>
+        <Connective>&amp;&amp;</Connective>
+        <Visible>true</Visible>
+        <DSLId>B}nil</DSLId>
+      </SimpleTest>
       <ShowPatterns>false</ShowPatterns>
       <Logical>false</Logical>
+      <Action id="L}1226">
+        <Form>Modify</Form>
+        <Target>root</Target>
+        <ResolvedTarget>`L}1217`</ResolvedTarget>
+        <Expression id="L}1229">
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>amountsOwned</ParameterAlias>
+          <ParameterID>J}com.toycocredo.creditrating.v1.Root.{amountsOwned}</ParameterID>
+        </Expression>
+        <Expression id="L}1230">
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>creditHistoryLengthMonths</ParameterAlias>
+          <ParameterID>J}com.toycocredo.creditrating.v1.Root.{creditHistoryLengthMonths}</ParameterID>
+        </Expression>
+        <Expression id="L}1231">
+          <Value>root.creditScore - 11</Value>
+          <ResolvedValue>`L}1217`.`J}com.toycocredo.creditrating.v1.Root.{creditScore}` - 11</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>creditScore</ParameterAlias>
+          <ParameterID>J}com.toycocredo.creditrating.v1.Root.{creditScore}</ParameterID>
+        </Expression>
+        <Expression id="L}1232">
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>creditUseCount</ParameterAlias>
+          <ParameterID>J}com.toycocredo.creditrating.v1.Root.{creditUseCount}</ParameterID>
+        </Expression>
+        <Expression id="L}1233">
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>customerPartyId</ParameterAlias>
+          <ParameterID>J}com.toycocredo.creditrating.v1.Root.{customerPartyId}</ParameterID>
+        </Expression>
+        <Expression id="L}1234">
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>newCredit</ParameterAlias>
+          <ParameterID>J}com.toycocredo.creditrating.v1.Root.{newCredit}</ParameterID>
+        </Expression>
+        <Expression id="L}1235">
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>paymentHistoryGood</ParameterAlias>
+          <ParameterID>J}com.toycocredo.creditrating.v1.Root.{paymentHistoryGood}</ParameterID>
+        </Expression>
+        <Expression id="L}1236">
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>scoringUncertainty</ParameterAlias>
+          <ParameterID>J}com.toycocredo.creditrating.v1.Root.{scoringUncertainty}</ParameterID>
+        </Expression>
+        <DSLId>B}nil</DSLId>
+      </Action>
     </Rule>
     <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
     <CreationUpdateNumber>3</CreationUpdateNumber>
   </RuleSet>
-  <ValidationUpdateNumber>-1</ValidationUpdateNumber>
-  <UpdateNumber>160</UpdateNumber>
+  <ValidationUpdateNumber>175</ValidationUpdateNumber>
+  <UpdateNumber>175</UpdateNumber>
   <ResourceBundle>CreditRatingRuleTranslations</ResourceBundle>
   <TestModel id="L}3">
     <TestSuite id="G}-6cdae697:14dac55803a:-7c14">
