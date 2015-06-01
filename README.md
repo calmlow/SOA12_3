@@ -22,13 +22,10 @@ To get everything set up properly in order to be able to focus on the main objec
 
 ### Instructions
 * Check out the code from here: http://github.com/bjornn/SOA12_3
-<code>git clone  http://github.com/bjornn/SOA12_3.git</code>
-or
-<code>git clone  https://github.com/calmlow/SOA12_3.git</code>
+<br/><code>git clone  http://github.com/bjornn/SOA12_3</code>
 
-* Alternatively, if you don't want to use git,  download a zip archive of the entire codebase from here:
+* Alternatively, if you don't want to use git,  download a zip archive of the entire codebase from here:<br/>
 <code>http://github.com/bjornn/SOA12_3/archive/master.zip</code>
-<code>http://github.com/calmlow/SOA12_3/archive/master.zip</code>
 
 
 ## Lab 1: Create (or extend) a Rule component
@@ -126,10 +123,29 @@ A skeleton BPEL process is provided (a project named Application/LAB3_1_1). It c
 
 ## Lab 3: Add a human workflow to the Main BPEL Process
 ### Objectives
-* Create a simple human workflow component and integrate it with a BPEL Process.
+* Include a human workflow step in the main BPEL process.
+
 ### Instructions
+1. Create a new user in the application server (hint: Home >Summary of Security Realms >myrealm >Users and Groups)
+2. In the main BPEL process place a human task component where indicated by placeholder activity.
+3. Open the newly added Human Task Activity. Add input in the form of the input to the BPEL Process.
+4. A HumanTask.task file is created in the project. Open it and drag a "single participant" into the Assignment area of the task.
+5. Open the newly added participant. Assign the user you created in the application server in step 1 to the participant.
+6. The outcome of the human task is defined under General in the task (keep the default APPROVE and REJECT).
+7. Finish up by going back to the main BPEL process and add corresponding assignments to the APPROVE and REJECT logic switch branches.<br/>
+<code>if REJECT then creditScore = creditScore - 10;
+if APPROVE then creditScore = creditScore + 10;
+8. Deploy
+9. Try to run the process and log in to the worklist application as the user you created and assigned previously.  The Worklist Application should be deployed as an application at <code>http://localhost:7101/integration/worklistapp</code>
+<br/>Try to Accept or reject something.
+
+
 ### Configurations
+
+
 ### Questions
+
+
 
 ## Lab 4: Add sensors to the main BPEL process
 ### Objectives
